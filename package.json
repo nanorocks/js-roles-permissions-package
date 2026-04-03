@@ -1,0 +1,57 @@
+{
+  "name": "@yourorg/permissions",
+  "version": "1.0.0",
+  "description": "Production-ready TypeScript permissions and roles package for Node.js and Next.js, inspired by Spatie Laravel Permission",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./adapters/drizzle": {
+      "types": "./dist/adapters/drizzle.d.ts",
+      "require": "./dist/adapters/drizzle.js",
+      "import": "./dist/adapters/drizzle.mjs"
+    },
+    "./nextjs": {
+      "types": "./dist/nextjs/index.d.ts",
+      "require": "./dist/nextjs/index.js",
+      "import": "./dist/nextjs/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "permissions",
+    "roles",
+    "rbac",
+    "authorization",
+    "nextjs",
+    "drizzle",
+    "typescript"
+  ],
+  "author": "Andrej Nankov, MSc.",
+  "license": "MIT",
+  "peerDependencies": {
+    "drizzle-orm": "^0.30.0",
+    "next": ">=14.0.0",
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesOptional": {
+    "next": true,
+    "react": true
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "drizzle-orm": "^0.30.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
